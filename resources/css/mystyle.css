@@ -1,70 +1,163 @@
 body {
   margin:0;
   overflow-x:hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 }
+/* controls the header banner part of the page */
+div.container{
+  background:url(/resources/images/banner.jpeg);
+  height: 40em;
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
 
-header{
-  height:70px;
-  background:gray;
-  
-  }
-
-ul,li{
-  list-style: none;
-  display:inline-block;
-  padding-right:30px;
-  margin:10px;
-  font-family:sans-serif,verdana,Tahoma;
-  }
-
+}
 
 nav{
   text-align:right;
-  overflow:hidden;
-}
 
-a{
-  text-decoration:none;
+}
+#intro{
+float:left;
+padding-left:10px;
+margin-top:10px;
+font-size: 30px;
+}
+ul,li{
+  list-style: none;
+  display:inline-block;
+  padding:10px 25px ;
+  margin:3px;
+  font-family:sans-serif,verdana,Tahoma; 
+ }
+
+  a{
+    text-decoration:none;
+    color:black;
+    font-size:17px; 
+    padding:10px; 
+    border-radius: 9px 0  
+  }
+  
+  a:hover { 
+    background-color:rgba(128, 128, 128, 0.349);
+  }
+/* controls the text content in the header banner */
+  section.top{
+    text-align: center;
+    padding-top:50px;
+  }
+
+  h1{
+    font-size:50px;
+    padding-top:30px;
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+
+  p.top{
+    font-size:22px;
+  }
+
+button.projects{
   color:white;
+  background:blue;
+  padding:15px;
+  border-radius:30px;
+  cursor: pointer;
+  
+  }
+/* controls the first image after the banner on the page */
+    .responsive {
+      width:100%;
+      max-width: 700px;
+      height: auto;
+    }
+
+  /* controls the grid part of the page, dividing the div to contain image on the side */
+  .grid-parent{
+    display:grid;
+    height:400px;
+   
+  }
+  .side-by-side{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:0;
+    margin:0;
+    background-color:white;
 }
 
-img.top{
-  background-size:cover;
-  height: 250px;
-  width:100%;
+  #grid-left{
+    padding:60px 67px;
+  }
+
+  /* controls the text in the center of the page */
+ #middle{
+   background-color:whitesmoke;
+   display:inline-block;
+   width: 100%;
+   text-align:center;
+   padding:20px;
+ }
+
+ /* controls the parent container for the six cards on the page */
+section.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(1,1fr);
+  padding:20px;
+
 }
 
-H1.center{
-  text-align:center;
-  margin:30px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
+article{
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(1, 1fr);
 
-img{
-  height: 300px;
-  width:350px;
   
 }
-
-#left{
-  float:left;
-  width:50%;
-  margin:50px;
-
+/* controls the 6 cards on the page */
+article.inner-box{
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap:10px;
+  margin:20px;
+  background-color: white;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  box-shadow: 0 0px 10px 2px #ddd; 
 }
-#right{
-  float:right;
-  position:relative;
-  margin:50px;
+
+/* applies formatting to the 6 cards */
+.card-side{
+ padding-top:2em;
+  width: 6em;
 }
 
-footer{
+/* controls the banner at center of the Featured projects div*/
+.center-page{
+  background:url(/resources/images/branding.jpg);
+  height: 20em;
+  background-size:cover;
+}
+
+.center-text{
+  text-align: center;
+  background: none;
+  color:black;
+}
+
+/* controls the footer part of the page */
+.footer{
   background:gray;
-  height:50px;
+  height:60px;
   width:100%;
   text-align:center;
   color:white;
-  position: relative;
-  clear:both;
+  position:relative;
+  bottom:0;
   padding:10px;
+
 }
