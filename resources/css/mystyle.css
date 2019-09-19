@@ -4,14 +4,15 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 
 }
+
 /* controls the header banner part of the page */
 div.container{
-  background:url(/resources/images/banner.jpeg);
+  background: linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),url("../images/laptopCover.jpg");
   height: 40em;
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
-
+  padding-bottom:220px;
 }
 
 nav{
@@ -37,11 +38,12 @@ ul,li{
     color:black;
     font-size:17px; 
     padding:10px; 
-    border-radius: 9px 0  
+    border-radius: 2px; 
   }
   
   a:hover { 
-    background-color:rgba(128, 128, 128, 0.349);
+    background-color:rgba(63, 112, 218, 0.993);
+    color:white;
   }
 /* controls the text content in the header banner */
   section.top{
@@ -61,12 +63,13 @@ ul,li{
 
 button.projects{
   color:white;
-  background:blue;
+  background:rgba(63, 112, 218, 0.993);
   padding:15px;
   border-radius:30px;
   cursor: pointer;
-  
   }
+
+  
 /* controls the first image after the banner on the page */
     .responsive {
       width:100%;
@@ -86,6 +89,12 @@ button.projects{
     grid-gap:0;
     margin:0;
     background-color:white;
+}
+@media(max-width:576px){
+  .side-by-side{
+    display:flex;
+    flex-direction:column;
+  }
 }
 
   #grid-left{
@@ -125,8 +134,6 @@ article.inner-box{
   grid-gap:10px;
   margin:20px;
   background-color: white;
-  border-top: 1px solid gray;
-  border-right: 1px solid gray;
   box-shadow: 0 0px 10px 2px #ddd; 
 }
 
@@ -138,7 +145,7 @@ article.inner-box{
 
 /* controls the banner at center of the Featured projects div*/
 .center-page{
-  background:url(/resources/images/branding.jpg);
+  background:url("https://res.cloudinary.com/seamanb2k/image/upload/v1562247320/branding.jpg");
   height: 20em;
   background-size:cover;
 }
@@ -151,7 +158,7 @@ article.inner-box{
 
 /* controls the footer part of the page */
 .footer{
-  background:gray;
+  background:rgba(63, 112, 218, 0.993);
   height:60px;
   width:100%;
   text-align:center;
@@ -159,5 +166,15 @@ article.inner-box{
   position:relative;
   bottom:0;
   padding:10px;
+}
+@media(max-width:576px){
+  .footer{
+    position:relative;
+    width:100%;
+    height:60px;
+    clear:both;
+
+  
+    }
 
 }
